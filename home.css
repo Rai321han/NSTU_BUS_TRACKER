@@ -1,0 +1,279 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  background-color: var(--color-white);
+  height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--color-secondary);
+  position: fixed;
+  gap: 1em;
+}
+
+.ctr-btn:disabled {
+  background-color: #04868d;
+  cursor: default;
+}
+
+#logo {
+  height: 40px;
+  background-image: url(NSTU_BUS_TRACKING_LOGO-01.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  padding-top: 5em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url(menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.menu-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+
+.menu-container {
+  border: 2px solid var(--color-secondary);
+  top: 100%;
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+  background-color: var(--color-primary-dark);
+  padding: 2em;
+  cursor: pointer;
+}
+
+.menu-option--name {
+  color: var(--color-white);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menu-option:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.menu-option--name:hover {
+  color: var(--color-secondary);
+}
+
+.menu-btn-container:hover > .menu-container {
+  display: block;
+}
+
+.side {
+  background-color: var(--color-primary-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.side-title {
+  background-color: var(--color-white);
+  padding: 0.5em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-title p {
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.2em;
+}
+
+.side-filter {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  gap: 0.5em;
+}
+.select {
+  margin-top: 10px;
+  padding: 0.5em;
+  background-color: var(--color-primary-light);
+  border-radius: 10px;
+  color: var(--color-secondary);
+  /* width: 100%; */
+  font-size: 1rem;
+  /* outline: none; */
+  border-style: none;
+  letter-spacing: 1px;
+}
+
+.select-label {
+  font-size: 0.8rem;
+  color: var(--color-white);
+}
+
+.select option {
+  color: var(--color-white);
+  text-align: center;
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+.select-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.time-picker {
+  padding: 0.5em 1em;
+  background-color: var(--color-primary-light);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-top: 10px;
+}
+
+.time-picker:focus {
+  outline: none;
+}
+
+.side-result {
+  background-color: var(--color-primary-light);
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.result {
+  display: flex;
+  gap: 1em;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+.result-title,
+.result-value {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+.result-value {
+  background-color: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
+.line-animation {
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-primary-dark);
+  animation: real-time 1s ease-in 0.5s infinite;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.red {
+  color: red;
+}
+
+.map {
+  height: 90vh;
+  width: 100%;
+  background-image: url(map_demo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  align-self: center;
+  color: var(--color-white);
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover ~ .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  display: none;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+@keyframes real-time {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+}
