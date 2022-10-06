@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSTU BUS TRACKING</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div>
+        <button class="ctr-btn tooltip" disabled>Request a bus</button>
+        <span class="tooltip-text">Comming soon...</span>
+      </div>
+      <div id="logo"></div>
+      <div class="menu">
+        <div class="menu-btn-container">
+          <div class="menu-btn"></div>
+          <div class="menu-container">
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div>
+                <a class="menu-option--name red" href="">Live Bus</a>
+              </div>
+            </div>
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div>
+                <a class="menu-option--name" href="profile.html">Profile</a>
+              </div>
+            </div>
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div><a class="menu-option--name" href="">Schedule</a></div>
+            </div>
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div><a class="menu-option--name" href="">Contact</a></div>
+            </div>
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div><a class="menu-option--name" href="">About</a></div>
+            </div>
+            <div class="menu-option">
+              <div class="menu-icon"></div>
+              <div><a class="menu-option--name" href="">Log Out</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="side">
+        <div class="side-title">
+          <p>LIVE BUS</p>
+          <div class="line-animation"></div>
+        </div>
+        <div class="side-filter">
+          <div class="filter-menu">
+            <div class="select-menu">
+              <label for="" class="select-label">BUS FROM</label>
+              <select name="" id="" class="select">
+                <option value="campus">Campus</option>
+                <option value="maijdee">Maijdee Court</option>
+                <option value="maijdee-bazar">Maijdee Bazar</option>
+                <option value="chowrasta">Chowrasta</option>
+                <option value="chowmohuni">Chowmohuni</option>
+                <option value="bashurhat">Bashurhat</option>
+                <option value="shubarnachar">Subarnachar</option>
+              </select>
+            </div>
+
+            <div class="select-menu">
+              <label for="" class="select-label">TYPE</label>
+              <select name="" id="" class="select">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="staff">Staff</option>
+              </select>
+            </div>
+
+            <div class="select-menu">
+              <label for="" class="select-label">TIME</label>
+              <input
+                class="time-picker"
+                type="time"
+                value="08:00"
+                name=""
+                min="12:00"
+                max="10:00"
+                required
+              />
+            </div>
+
+            <div class="select-menu">
+              <label for="" class="select-label">BUS NAME</label>
+              <select name="" id="" class="select">
+                <option value="hasnahena">Hasnahena</option>
+                <option value="shurjomukhi">Shurjomukhi</option>
+                <option value="shapla">Shapla</option>
+                <option value="rajnigandha">Rajnigandha</option>
+                <option value="joba">Joba</option>
+                <option value="tulip">Tulip</option>
+              </select>
+            </div>
+            <div>
+              <button class="ctr-btn btn-primary">Start Tracking</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-result">
+          <div class="title">BUS INFORMATION</div>
+          <div class="result">
+            <div class="result-title">Est. arrival time</div>
+            <div class="result-value">6:45 PM</div>
+          </div>
+          <div class="result">
+            <div class="result-title">Destination</div>
+            <div class="result-value">Maijdee</div>
+          </div>
+        </div>
+      </div>
+      <div class="map"></div>
+    </main>
+  </body>
+</html>
