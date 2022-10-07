@@ -13,6 +13,12 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  padding: 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
 :root {
   /* COLORS */
   --color-primary-dark: #222831;
@@ -27,6 +33,7 @@ html {
   --fs-placeholder: 1.25rem;
   --fs-btn: 1.3rem;
   --fs-heading: 3rem;
+  --fs-page-title: 1.6rem;
   /* FONT-FAMILY */
   --ff-heading: "Ubuntu", Helvetica;
   --ff-paragraph: "Open Sans", sans-serif;
@@ -93,6 +100,7 @@ p {
   min-width: 300px;
 }
 
+.block-label,
 .access-form label {
   margin-top: 1.5em;
   color: var(--color-white);
@@ -101,7 +109,31 @@ p {
   font-size: var(--ff-paragraph);
   letter-spacing: 1px;
 }
-.access-form input {
+
+.block-label {
+  margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+}
+
+.block-label::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-white);
+  position: absolute;
+  bottom: -5px;
+}
+
+.description {
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+  width: 90%;
+  max-width: 500px;
+}
+
+.access-form input,
+.access-form textarea {
   padding: 1em 2em;
   border-radius: 10px;
   border-style: none;
@@ -112,13 +144,15 @@ p {
   font-size: 1rem;
 }
 
-.access-form input::placeholder {
+.access-form input::placeholder,
+.access-form textarea::placeholder {
   color: var(--color-placeholder);
   letter-spacing: 1px;
   font-size: 1rem;
 }
 
-.access-form input:focus {
+.access-form input:focus,
+.access-form textarea:focus {
   outline: none;
   box-shadow: inset 0px 0 0 1px var(--color-secondary);
 }
@@ -199,6 +233,157 @@ p {
 .btn-link:focus {
   outline: none;
   background-color: #04868d;
+}
+
+.inline-link {
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: all 0.2s ease-in;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+.greyed-text {
+  font-size: 0.8rem;
+  color: var(--color-placeholder);
+}
+
+/* //////-----------navigation--------///// */
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--color-secondary);
+  position: fixed;
+  gap: 1em;
+}
+
+.ctr-btn:disabled {
+  background-color: #04868d;
+  cursor: default;
+}
+
+#logo {
+  height: 40px;
+  background-image: url(NSTU_BUS_TRACKING_LOGO-01.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url(menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.menu-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+
+.menu-container {
+  border: 2px solid var(--color-secondary);
+  top: 100%;
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+  background-color: var(--color-primary-dark);
+  padding: 2em;
+  cursor: pointer;
+  width: max-content;
+}
+
+.menu-option--name {
+  color: var(--color-white);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menu-option:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.menu-option--name:hover {
+  color: var(--color-secondary);
+}
+
+.menu-btn-container:hover > .menu-container {
+  display: block;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover ~ .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  display: none;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+.red {
+  color: red;
+}
+
+.page-header {
+  padding: 2em 5em;
+  background-color: var(--color-primary-light);
+}
+
+.page-header p {
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: var(--fs-page-title);
+}
+
+.page-container {
+  padding: 3em 5em;
+}
+
+.footer {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  width: 100%;
+  background-color: var(--color-primary-light);
+  padding: 1em;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+
+.footer p {
+  color: var(--color-white);
+}
+
+main {
+  padding-top: 5em;
 }
 
 @media (max-width: 1000px) {
