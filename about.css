@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
