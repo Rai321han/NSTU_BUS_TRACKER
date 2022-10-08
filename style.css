@@ -374,8 +374,8 @@ p {
   background-color: var(--color-primary-light);
   padding: 1em;
   text-align: center;
-  position: sticky;
-  bottom: 0;
+  /* position: sticky;
+  bottom: 0; */
 }
 
 .footer p {
