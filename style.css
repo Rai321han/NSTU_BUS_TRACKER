@@ -58,6 +58,34 @@ body {
   background-color: var(--color-primary-dark);
 }
 
+#feedback::before,
+#profile::before,
+#live-bus::before,
+#about::before,
+#logout::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  margin-right: 1em;
+}
+
+#live-bus::before {
+  content: "\f601";
+}
+#profile::before {
+  content: "\f007";
+}
+#feedback::before {
+  content: "\f075";
+}
+#about::before {
+  content: "\f05a";
+}
+#logout::before {
+  content: "\f2f5";
+}
+
 .container {
   background-color: var(--color-primary-dark);
   width: 100%;
