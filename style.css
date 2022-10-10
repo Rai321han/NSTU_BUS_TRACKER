@@ -417,6 +417,7 @@ main {
   .container {
     flex-direction: column;
     padding: 0;
+    margin-bottom: 2em;
   }
 
   .ctr-btn {
