@@ -13,7 +13,7 @@ body {
   padding: 0;
 }
 
-.about {
+#about {
   display: flex;
   flex-direction: column;
   gap: 2em;

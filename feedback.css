@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-.feedback {
+#feedback {
   display: flex;
   flex-direction: column;
   justify-content: center;

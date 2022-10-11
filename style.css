@@ -58,6 +58,7 @@ body {
   background-color: var(--color-primary-dark);
 }
 
+/* //////////////-------fontawesome icons------////////// */
 #feedback::before,
 #profile::before,
 #live-bus::before,
@@ -85,6 +86,8 @@ body {
 #logout::before {
   content: "\f2f5";
 }
+
+/* ///////////////////////////////////////////// */
 
 .container {
   background-color: var(--color-primary-dark);
@@ -125,7 +128,7 @@ h1 {
   min-width: 300px;
 }
 
-.login-form {
+#login-form {
   align-items: center;
 }
 
@@ -293,7 +296,7 @@ p {
   color: var(--color-placeholder);
 }
 
-/* //////-----------navigation--------///// */
+/* ///////////////-----------navigation--------//////////// */
 .nav {
   width: 100%;
   display: grid;
@@ -376,6 +379,13 @@ p {
   display: block;
 }
 
+#live-bus {
+  color: red;
+}
+
+/* //////////////////////////////////////////////////////// */
+
+/* ///////////---------tooltip utility classes------/////// */
 .tooltip {
   position: relative;
 }
@@ -393,10 +403,9 @@ p {
   color: var(--color-white);
   border-radius: 10px;
 }
-.red {
-  color: red;
-}
+/* /////////////////////////////////////////////////////////////////// */
 
+/* /////////////-------Page Utility Classes-----------////////// */
 .page-header {
   padding: 2em 5em;
   background-color: var(--color-primary-light);
@@ -416,6 +425,9 @@ p {
   flex-grow: 1;
 }
 
+/* ///////////////////////////////////////////////////////// */
+
+/* //////////----------Footer----------/////////////// */
 .footer {
   opacity: 0.7;
   font-size: 0.9rem;
@@ -428,6 +440,7 @@ p {
 .footer p {
   color: var(--color-white);
 }
+/* //////////////////////////////////////////////////////// */
 
 main {
   min-height: 90vh;

@@ -51,9 +51,7 @@ body {
   background-color: var(--color-primary-light);
   border-radius: 10px;
   color: var(--color-secondary);
-  /* width: 100%; */
   font-size: 1rem;
-  /* outline: none; */
   border-style: none;
   letter-spacing: 1px;
 }
@@ -138,10 +136,6 @@ body {
   color: var(--color-white);
 }
 
-.red {
-  color: red;
-}
-
 .map {
   height: 90vh;
   width: 100%;
@@ -158,24 +152,6 @@ body {
   letter-spacing: 1px;
   align-self: center;
   color: var(--color-white);
-}
-
-.tooltip {
-  position: relative;
-}
-
-.tooltip:hover ~ .tooltip-text {
-  display: block;
-}
-
-.tooltip-text {
-  position: absolute;
-  display: none;
-  padding: 0.5em;
-  font-size: 0.8rem;
-  background-color: var(--color-primary-light);
-  color: var(--color-white);
-  border-radius: 10px;
 }
 
 @keyframes real-time {
