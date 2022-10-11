@@ -375,13 +375,12 @@ p {
 }
 
 .menu-option--name:hover {
-  color: var(--color-secondary);
+  color: var(--color-secondary) !important;
 }
 
 .menu-btn-container:hover > .menu-container {
   display: block;
 }
-
 /* //////////////////////////////////////////////////////// */
 
 /* ///////////---------tooltip utility classes------/////// */
