@@ -59,11 +59,11 @@ body {
 }
 
 /* //////////////-------fontawesome icons------////////// */
-#feedback::before,
-#profile::before,
-#live-bus::before,
-#about::before,
-#logout::before {
+#feedback-icon::before,
+#profile-icon::before,
+#live-bus-icon::before,
+#about-icon::before,
+#logout-icon::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -71,20 +71,23 @@ body {
   margin-right: 1em;
 }
 
-#live-bus::before {
+#live-bus-icon::before {
   content: "\f601";
 }
-#profile::before {
+#profile-icon::before {
   content: "\f007";
 }
-#feedback::before {
+#feedback-icon::before {
   content: "\f075";
 }
-#about::before {
+#about-icon::before {
   content: "\f05a";
 }
-#logout::before {
+#logout-icon::before {
   content: "\f2f5";
+}
+#live-bus-icon {
+  color: red;
 }
 
 /* ///////////////////////////////////////////// */
@@ -377,10 +380,6 @@ p {
 
 .menu-btn-container:hover > .menu-container {
   display: block;
-}
-
-#live-bus {
-  color: red;
 }
 
 /* //////////////////////////////////////////////////////// */
