@@ -18,3 +18,7 @@ body {
   flex-direction: column;
   gap: 2em;
 }
+
+.description {
+  text-align: justify;
+}
