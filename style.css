@@ -354,14 +354,16 @@ p {
 
 .menu-container {
   border: 2px solid var(--color-secondary);
-  top: 100%;
+  top: 200%;
   border-radius: 10px;
   position: absolute;
-  display: none;
   background-color: var(--color-primary-dark);
   padding: 2em;
   cursor: pointer;
   width: max-content;
+  transition: all 0.1s ease-out;
+  transform-origin: top;
+  transform: scale(0);
 }
 
 .menu-option--name {
@@ -378,9 +380,9 @@ p {
   color: var(--color-secondary) !important;
 }
 
-.menu-btn-container:hover > .menu-container {
-  display: block;
-}
+/* .menu-btn-container:hover > .menu-container {
+  transform: scale(1);
+} */
 /* //////////////////////////////////////////////////////// */
 
 /* ///////////---------tooltip utility classes------/////// */
@@ -446,7 +448,7 @@ main {
 
 @media (max-width: 900px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .ctr-btn {

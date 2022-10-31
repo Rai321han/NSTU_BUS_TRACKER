@@ -22,3 +22,7 @@ body {
 .description {
   text-align: justify;
 }
+
+#about-icon {
+  color: var(--color-secondary);
+}
